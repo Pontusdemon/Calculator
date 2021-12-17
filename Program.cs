@@ -11,8 +11,13 @@ namespace Calculator
 
             if (Subject == "movement")
             {
-                var Movement = new MovementSelector();
-                Movement.MovementSetup();
+                var Movement = new Movement();
+                Movement.MovementSelector();
+            }
+
+            else if (Subject == "thermophysics")
+            {
+
             }
         }
     }
