@@ -205,6 +205,16 @@ namespace Calculator
                     Acceleration.t = Convert.ToDouble(Console.ReadLine());
                 }
             }
+
+            else if (MovementType == "distance")
+            {
+
+            }
+
+            else if (MovementType == "time")
+            {
+
+            }
         }
     }
 }
