@@ -30,7 +30,8 @@ namespace Calculator
 
         public void AccelerationByDistance()
         {
-
+            a = (2 * (s - (u * t))) / Math.Pow(t, 2);
+            Console.WriteLine("acceleration = " + a);
         }
     }
 }

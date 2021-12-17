@@ -156,6 +156,8 @@ namespace Calculator
 
             else if (MovementType == "acceleration")
             {
+                var Acceleration = new Acceleration();
+
                 Console.WriteLine("select acceleration type");
                 string AccelerationType = Console.ReadLine();
 
@@ -164,7 +166,43 @@ namespace Calculator
                     Console.WriteLine("a = (v - x) / t");
 
                     Console.WriteLine("enter velocity");
+                    Acceleration.v = Convert.ToDouble(Console.ReadLine());
 
+                    Console.WriteLine("enter initial velocity");
+                    Acceleration.x = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter time");
+                    Acceleration.t = Convert.ToDouble(Console.ReadLine());
+
+                    Acceleration.GeneralAcceleration();
+                }
+
+                else if (AccelerationType == "timeless acceleration")
+                {
+                    Console.WriteLine("a = (v^2 - x^2) / 2s");
+
+                    Console.WriteLine("enter velocity");
+                    Acceleration.v = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter initial velocity");
+                    Acceleration.x = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter distance");
+                    Acceleration.s = Convert.ToDouble(Console.ReadLine());
+                }
+
+                else if (AccelerationType == "acceleration by distance")
+                {
+                    Console.WriteLine("a = 2(s - ut) / t^2");
+
+                    Console.WriteLine("enter distance");
+                    Acceleration.s = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter initial velocity");
+                    Acceleration.u = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter time");
+                    Acceleration.t = Convert.ToDouble(Console.ReadLine());
                 }
             }
         }
