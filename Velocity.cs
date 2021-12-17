@@ -54,12 +54,13 @@ namespace Calculator
 
             public override void VelocityMaster()
             {
-                v = Math.Sqrt(Math.Pow(x, 2) + (2 * a * s));
-
                 if (u > 0)
                 {
+                    s = (u * t) + ((a * Math.Pow(t, 2)) / 2);
                     x = u;
                 }
+
+                v = Math.Sqrt(Math.Pow(x, 2) + (2 * a * s));
 
                 Console.WriteLine("velocity = " + v);
             }

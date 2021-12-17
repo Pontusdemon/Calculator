@@ -159,7 +159,13 @@ namespace Calculator
                 Console.WriteLine("select acceleration type");
                 string AccelerationType = Console.ReadLine();
 
-                
+                if (AccelerationType == "acceleration")
+                {
+                    Console.WriteLine("a = (v - x) / t");
+
+                    Console.WriteLine("enter velocity");
+
+                }
             }
         }
     }
