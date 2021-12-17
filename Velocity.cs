@@ -23,6 +23,26 @@ namespace Calculator
             }
         }
 
+        public class Master : Velocity
+        {
+            public double v;
+            public double x;
+            public double a;
+            public double t;
+
+            public override void VelocityMaster()
+            {
+                v = x + (a * t);
+                Console.WriteLine("velocity = " + v);
+            }
+
+            public void InitialVelocity()
+            {
+                x = v - (a * t);
+                Console.WriteLine("initial velocity = " + x);
+            }
+        }
+
         public class Timeless : Velocity
         {
             public double v;
