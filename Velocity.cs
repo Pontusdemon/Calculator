@@ -50,6 +50,7 @@ namespace Calculator
             public double a;
             public double s;
             public double u;
+            public double t;
 
             public override void VelocityMaster()
             {
@@ -67,6 +68,20 @@ namespace Calculator
             {
                 x = Math.Sqrt(Math.Pow(v, 2) - (2 * a * s));
                 Console.WriteLine("initial velocity = " + x);
+            }
+        }
+
+        public class VelocityByDistance : Velocity
+        {
+            public double s;
+            public double u;
+            public double t;
+            public double a;
+
+            public override void VelocityMaster()
+            {
+                u = (s / t) - ((a * t) / 2);
+                Console.WriteLine("initial velocity = " + u);
             }
         }
     }
