@@ -8,6 +8,18 @@ namespace Calculator
 {
     public class Time
     {
+        public double t; // time
 
+        public double s;
+        public double v;
+        public double x;
+        public double a;
+        public double u;
+
+        public void TimeByAverageVelocity()
+        {
+            t = s / v;
+            Console.WriteLine("time = " + t);
+        }
     }
 }
