@@ -242,15 +242,41 @@ namespace Calculator
                 }
 
                 else
-                // distance 
                 {
                     Console.WriteLine("s = ut + (at^2) / 2");
+
+                    Console.WriteLine("enter initial velocity");
+                    Distance.u = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter time");
+                    Distance.t = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter acceleration");
+                    Distance.a = Convert.ToDouble(Console.ReadLine());
+
+                    Distance.DistanceDistance();
                 }
             }
 
             else if (MovementType == "time")
             {
+                Console.WriteLine("select movement time");
+                string TimeCalculation = Console.ReadLine();
 
+                if (TimeCalculation == "by average velocity")
+                {
+                    Console.WriteLine("t = s / v");
+                }
+
+                else if (TimeCalculation == "by acceleration")
+                {
+                    Console.WriteLine("t = (v - x) / a");
+                }
+
+                else if (TimeCalculation == "by distance")
+                {
+                    Console.WriteLine("t = (-u + (u^2 + 2as)^0.5) /a");
+                }
             }
         }
     }

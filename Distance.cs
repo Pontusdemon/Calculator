@@ -8,11 +8,8 @@ namespace Calculator
 {
     public class Distance
     {
-        // s = v * t
-        // s = (v^2 + x^2) / 2a
-        // s = ut + (at^2) / 2
+        public double s; // distance
 
-        public double s;
         public double v;
         public double t;
         public double x;
