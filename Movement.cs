@@ -208,7 +208,44 @@ namespace Calculator
 
             else if (MovementType == "distance")
             {
+                Console.WriteLine("select how to calculate distance");
+                string DistanceCalculation = Console.ReadLine();
+                var Distance = new Distance();
 
+                if (DistanceCalculation == "by  average velocity")
+                {
+                    Console.WriteLine("s = v * t");
+
+                    Console.WriteLine("enter velocity");
+                    Distance.v = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter time");
+                    Distance.t = Convert.ToDouble(Console.ReadLine());
+
+                    Distance.DistanceByAverageVelocity();
+                }
+
+                else if (DistanceCalculation == "timeless")
+                {
+                    Console.WriteLine("s = (v^2 + x^2) / 2a");
+
+                    Console.WriteLine("enter velocity");
+                    Distance.v = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter initial velocity");
+                    Distance.x = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter acceleration");
+                    Distance.a = Convert.ToDouble(Console.ReadLine());
+
+                    Distance.TimelessDistance();
+                }
+
+                else
+                // distance 
+                {
+                    Console.WriteLine("s = ut + (at^2) / 2");
+                }
             }
 
             else if (MovementType == "time")
