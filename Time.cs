@@ -21,5 +21,16 @@ namespace Calculator
             t = s / v;
             Console.WriteLine("time = " + t);
         }
+
+        public void TimeByAcceleration()
+        {
+            t = (v - x) / a;
+            Console.WriteLine("time = " + t);
+        }
+
+        public void TimeByDistance()
+        {
+            
+        }
     }
 }

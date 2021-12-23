@@ -262,15 +262,35 @@ namespace Calculator
             {
                 Console.WriteLine("select movement time");
                 string TimeCalculation = Console.ReadLine();
+                var Time = new Time();
 
                 if (TimeCalculation == "by average velocity")
                 {
                     Console.WriteLine("t = s / v");
+
+                    Console.WriteLine("enter distance");
+                    Time.s = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter velocity");
+                    Time.v = Convert.ToDouble(Console.ReadLine());
+
+                    Time.TimeByAverageVelocity();
                 }
 
                 else if (TimeCalculation == "by acceleration")
                 {
                     Console.WriteLine("t = (v - x) / a");
+
+                    Console.WriteLine("enter velocity");
+                    Time.v = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter initial velocity");
+                    Time.x = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("entter acceleration");
+                    Time.a = Convert.ToDouble(Console.ReadLine());
+
+                    Time.TimeByAcceleration();
                 }
 
                 else if (TimeCalculation == "by distance")
