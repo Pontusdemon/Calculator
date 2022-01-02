@@ -33,14 +33,14 @@ namespace Calculator
                     AverageVelocity.VelocityMaster();
                 }
 
-                else if (VelocityType == "velocity")
+                else if (VelocityType == "general")
                 {
                     var Velocity = new Velocity.Master();
 
                     Console.WriteLine("press v for velocity, press x for intial velocity");
-                    string VelocityOption = Console.ReadLine();
+                    string GeneralVelocityType = Console.ReadLine();
 
-                    if (VelocityOption == "v")
+                    if (GeneralVelocityType == "v")
                     {
                         Console.WriteLine("v = x + at");
 
@@ -56,7 +56,7 @@ namespace Calculator
                         Velocity.VelocityMaster();
                     }
 
-                    else if (VelocityOption == "x")
+                    else if (GeneralVelocityType == "x")
                     {
                         Console.WriteLine("x = v - at");
 
@@ -118,9 +118,9 @@ namespace Calculator
                     var VelocityByDistance = new Velocity.VelocityByDistance();
 
                     Console.WriteLine("select final or initial velocity");
-                    string SelectVelocity = Console.ReadLine();
+                    string VelocityByDistanceType = Console.ReadLine();
 
-                    if (SelectVelocity == "final")
+                    if (VelocityByDistanceType == "final")
                     {
                         var GetCalculation = new Velocity.Timeless();
 
@@ -136,7 +136,7 @@ namespace Calculator
                         GetCalculation.VelocityMaster();
                     }
 
-                    else if (SelectVelocity == "initial")
+                    else if (VelocityByDistanceType == "initial")
                     {
                         Console.WriteLine("u = s / t - at / 2");
 
