@@ -161,7 +161,7 @@ namespace Calculator
                 Console.WriteLine("select acceleration type");
                 string AccelerationType = Console.ReadLine();
 
-                if (AccelerationType == "acceleration")
+                if (AccelerationType == "general")
                 {
                     Console.WriteLine("a = (v - x) / t");
 
@@ -212,7 +212,7 @@ namespace Calculator
                 string DistanceCalculation = Console.ReadLine();
                 var Distance = new Distance();
 
-                if (DistanceCalculation == "by  average velocity")
+                if (DistanceCalculation == "by average velocity")
                 {
                     Console.WriteLine("s = v * t");
 
@@ -296,6 +296,17 @@ namespace Calculator
                 else if (TimeCalculation == "by distance")
                 {
                     Console.WriteLine("t = (-u + (u^2 + 2as)^0.5) /a");
+
+                    Console.WriteLine("enter initial velocity");
+                    Time.u = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter acceleration");
+                    Time.a = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter distance");
+                    Time.s = Convert.ToDouble(Console.ReadLine());
+
+                    Time.TimeByDistance();
                 }
             }
         }
