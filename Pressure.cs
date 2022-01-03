@@ -50,15 +50,20 @@ namespace Calculator
 
             public override void Master()
             {
-                
+                x = p - (d * g * h);
             }
         }
 
         public class GeneralGaslaw : Pressure
         {
+            public double p;
+            public double k;
+            public double T;
+            public double V;
+
             public override void Master()
             {
-                throw new NotImplementedException();
+                p = (k * T) / V;
             }
         }
     }

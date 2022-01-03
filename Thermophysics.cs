@@ -47,16 +47,37 @@ namespace Calculator
                 if (PressureType == "defined")
                 {
                     Console.WriteLine("p = F / A");
+                    var DefinedPressure = new Pressure.Defined();
+
+                    Console.WriteLine("enter force");
+                    DefinedPressure.F = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter area");
+                    DefinedPressure.A = Convert.ToDouble(Console.ReadLine());
+
+                    DefinedPressure.Master();
                 }
 
                 else if (PressureType == "fluid")
                 {
                     Console.WriteLine("p = dgh");
+                    var FluidPressure = new Pressure.Fluid();
+
+                    Console.WriteLine("enter density");
+                    FluidPressure.d = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("enter gravity");
+                    FluidPressure.g = double.TryParse(Console.ReadLine(), out double g) ? g : 9.82;
+
+                    Console.WriteLine("enter fluid deaph");
+                    FluidPressure.h = Convert.ToDouble(Console.ReadLine());
+
+                    FluidPressure.Master();
                 }
 
                 else if (PressureType == "external")
                 {
-                    Console.WriteLine("x = p - dgh");
+
                 }
 
                 else if (PressureType == "gas")
