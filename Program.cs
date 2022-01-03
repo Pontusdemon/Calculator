@@ -17,7 +17,8 @@ namespace Calculator
 
             else if (Subject == "thermophysics")
             {
-
+                var Thermophysics = new Thermophysics();
+                Thermophysics.ThermophysicsSelector();
             }
         }
     }
