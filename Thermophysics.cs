@@ -44,9 +44,24 @@ namespace Calculator
                 Console.WriteLine("enter pressure type");
                 string PressureType = Console.ReadLine();
 
-                if (PressureType == "")
+                if (PressureType == "defined")
                 {
+                    Console.WriteLine("p = F / A");
+                }
 
+                else if (PressureType == "fluid")
+                {
+                    Console.WriteLine("p = dgh");
+                }
+
+                else if (PressureType == "external")
+                {
+                    Console.WriteLine("x = p - dgh");
+                }
+
+                else if (PressureType == "gas")
+                {
+                    Console.WriteLine("p = (k * T) / V");
                 }
             }
 
