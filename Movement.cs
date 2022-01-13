@@ -50,6 +50,22 @@ namespace Calculator
 
                         GeneralVelocity.VelocityMaster();
                     }
+
+                    else if (SelectVelocity == "initial")
+                    {
+                        Console.WriteLine("x = v - a * t");
+
+                        Console.WriteLine(VelocityInputSetup.new_v);
+                        GeneralVelocity.v = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine(VelocityInputSetup.new_a);
+                        GeneralVelocity.a = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine(VelocityInputSetup.new_t);
+                        GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
+
+                        GeneralVelocity.InitialVelocity();
+                    }
                 }
 
                 else if (VelocityType == "timeless")
