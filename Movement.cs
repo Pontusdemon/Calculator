@@ -10,6 +10,8 @@ namespace Calculator
     {
         public void MovementSelector()
         {
+            var VelocityInputSetup = new VelocitySetup();
+
             Console.WriteLine("select movement type");
             string MovementType = Console.ReadLine();
 
@@ -20,56 +22,31 @@ namespace Calculator
 
                 if (VelocityType == "average")
                 {
-                    var AverageVelocity = new Velocity.Average();
-
                     Console.WriteLine("v = s / t");
 
-                    Console.WriteLine("enter distance");
-                    AverageVelocity.s = Convert.ToDouble(Console.ReadLine());
-
-                    Console.WriteLine("enter time");
-                    AverageVelocity.t = Convert.ToDouble(Console.ReadLine());
-
+                    var AverageVelocity = new Velocity.Average();
                     AverageVelocity.VelocityMaster();
                 }
 
                 else if (VelocityType == "general")
                 {
-                    var Velocity = new Velocity.Master();
+                    var GeneralVelocity = new Velocity.Master();
 
-                    Console.WriteLine("press v for velocity, press x for intial velocity");
-                    string GeneralVelocityType = Console.ReadLine();
+                    Console.WriteLine("select inital or final velocity");
+                    string SelectVelocity = Console.ReadLine();
 
-                    if (GeneralVelocityType == "v")
+                    if (SelectVelocity == "final")
                     {
-                        Console.WriteLine("v = x + at");
+                        Console.WriteLine("v = x + a * t");
 
-                        Console.WriteLine("enter initial velocity");
-                        Velocity.x = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(VelocityInputSetup.new_x);
+                        GeneralVelocity.x = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter acceleration");
-                        Velocity.a = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(VelocityInputSetup.new_a);
+                        GeneralVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter time");
-                        Velocity.t = Convert.ToDouble(Console.ReadLine());
-
-                        Velocity.VelocityMaster();
-                    }
-
-                    else if (GeneralVelocityType == "x")
-                    {
-                        Console.WriteLine("x = v - at");
-
-                        Console.WriteLine("enter velocity");
-                        Velocity.v = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("enter acceleration");
-                        Velocity.a = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("enter time");
-                        Velocity.t = Convert.ToDouble(Console.ReadLine());
-
-                        Velocity.InitialVelocity();
+                        Console.WriteLine(VelocityInputSetup.new_t);
+                        GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
                     }
                 }
 

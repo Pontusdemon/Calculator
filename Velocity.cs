@@ -12,12 +12,20 @@ namespace Calculator
 
         public class Average : Velocity
         {
-            public double v;
-            public double s;
-            public double t;
+            double v;
+            double s;
+            double t;
 
             public override void VelocityMaster()
             {
+                var GetVelocitySetup = new VelocitySetup();
+
+                Console.WriteLine(GetVelocitySetup.new_s);
+                s = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine(GetVelocitySetup.new_t);
+                t = Convert.ToDouble(Console.ReadLine());
+
                 v = s / t;
                 Console.WriteLine("average velocity = " + v);
             }
@@ -85,5 +93,15 @@ namespace Calculator
                 Console.WriteLine("initial velocity = " + u);
             }
         }
+    }
+
+    public class VelocitySetup
+    {
+        public string new_v = "v = __";
+        public string new_x = "x = __";
+        public string new_a = "a = __";
+        public string new_s = "s = __";
+        public string new_u = "u = __";
+        public string new_t = "t = __";
     }
 }
