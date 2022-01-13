@@ -47,46 +47,44 @@ namespace Calculator
 
                         Console.WriteLine(VelocityInputSetup.new_t);
                         GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
+
+                        GeneralVelocity.VelocityMaster();
                     }
                 }
 
                 else if (VelocityType == "timeless")
                 {
+                    Console.WriteLine("select initial or final velocity");
+                    string SelectVelocity = Console.ReadLine();
+
                     var TimelessVelocity = new Velocity.Timeless();
 
-                    Console.WriteLine("select timeless velocity type");
-                    string TimelessVelocityType = Console.ReadLine();
-
-                    if (TimelessVelocityType == "final")
+                    if (SelectVelocity == "final")
                     {
                         Console.WriteLine("v = (x^2 + 2as)^0.5");
 
-                        Console.WriteLine("enter initial velocity");
+                        Console.WriteLine(VelocityInputSetup.new_x);
                         TimelessVelocity.x = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter acceleration");
+                        Console.WriteLine(VelocityInputSetup.new_a);
                         TimelessVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter distance");
+                        Console.WriteLine(VelocityInputSetup.new_s);
                         TimelessVelocity.s = Convert.ToDouble(Console.ReadLine());
-
-                        TimelessVelocity.VelocityMaster();
                     }
 
-                    else if (TimelessVelocityType == "initial")
+                    else if (SelectVelocity == "initial")
                     {
                         Console.WriteLine("x = (v^2 - 2as)^0.5");
 
-                        Console.WriteLine("enter velocity");
+                        Console.WriteLine(VelocityInputSetup.new_v);
                         TimelessVelocity.v = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter acceleration");
+                        Console.WriteLine(VelocityInputSetup.new_a);
                         TimelessVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter distance");
+                        Console.WriteLine(VelocityInputSetup.new_s);
                         TimelessVelocity.s = Convert.ToDouble(Console.ReadLine());
-
-                        TimelessVelocity.InitialTimelssVelocity();
                     }
                 }
 
