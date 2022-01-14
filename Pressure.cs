@@ -19,7 +19,7 @@ namespace Calculator
             public override void Master()
             {
                 p = F / A;
-                Console.WriteLine("pressure = " + p);
+                Console.WriteLine("p = " + p);
             }
         }
 
@@ -35,7 +35,7 @@ namespace Calculator
             public override void Master()
             {
                 p = x + (d * g * h);
-                Console.WriteLine("fluid pressure = " + p);
+                Console.WriteLine("p = " + p);
             }
         }
 
