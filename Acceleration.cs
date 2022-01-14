@@ -19,19 +19,19 @@ namespace Calculator
         public void GeneralAcceleration()
         {
             a = (v - x) / t;
-            Console.WriteLine("acceleration = " + a);
+            Console.WriteLine("a = " + a);
         }
 
         public void TimelessAcceleration()
         {
             a = (Math.Pow(v, 2) - Math.Pow(x, 2)) / (2 * s);
-            Console.WriteLine("acceleration = " + a);
+            Console.WriteLine("a = " + a);
         }
 
         public void AccelerationByDistance()
         {
             a = (2 * (s - (u * t))) / Math.Pow(t, 2);
-            Console.WriteLine("acceleration = " + a);
+            Console.WriteLine("a = " + a);
         }
     }
 }

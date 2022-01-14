@@ -18,7 +18,7 @@ namespace Calculator
 
             public override void VelocityMaster()
             {
-                var GetVelocitySetup = new VelocitySetup();
+                var GetVelocitySetup = new MovementSetup();
 
                 Console.WriteLine(GetVelocitySetup.new_s);
                 s = Convert.ToDouble(Console.ReadLine());
@@ -27,7 +27,7 @@ namespace Calculator
                 t = Convert.ToDouble(Console.ReadLine());
 
                 v = s / t;
-                Console.WriteLine("average velocity = " + v);
+                Console.WriteLine("v = " + v);
             }
         }
 
@@ -41,13 +41,13 @@ namespace Calculator
             public override void VelocityMaster()
             {
                 v = x + (a * t);
-                Console.WriteLine("velocity = " + v);
+                Console.WriteLine("v = " + v);
             }
 
             public void InitialVelocity()
             {
                 x = v - (a * t);
-                Console.WriteLine("initial velocity = " + x);
+                Console.WriteLine("x = " + x);
             }
         }
 
@@ -70,13 +70,13 @@ namespace Calculator
 
                 v = Math.Sqrt(Math.Pow(x, 2) + (2 * a * s));
 
-                Console.WriteLine("velocity = " + v);
+                Console.WriteLine("v = " + v);
             }
 
             public void InitialTimelssVelocity()
             {
                 x = Math.Sqrt(Math.Pow(v, 2) - (2 * a * s));
-                Console.WriteLine("initial velocity = " + x);
+                Console.WriteLine("x = " + x);
             }
         }
 
@@ -90,18 +90,8 @@ namespace Calculator
             public override void VelocityMaster()
             {
                 u = (s / t) - ((a * t) / 2);
-                Console.WriteLine("initial velocity = " + u);
+                Console.WriteLine("u = " + u);
             }
         }
-    }
-
-    public class VelocitySetup
-    {
-        public string new_v = "v = __";
-        public string new_x = "x = __";
-        public string new_a = "a = __";
-        public string new_s = "s = __";
-        public string new_u = "u = __";
-        public string new_t = "t = __";
     }
 }

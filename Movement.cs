@@ -10,7 +10,7 @@ namespace Calculator
     {
         public void MovementSelector()
         {
-            var VelocityInputSetup = new VelocitySetup();
+            var MovementInputSetup = new MovementSetup();
 
             Console.WriteLine("select movement type");
             string MovementType = Console.ReadLine();
@@ -39,13 +39,13 @@ namespace Calculator
                     {
                         Console.WriteLine("v = x + a * t");
 
-                        Console.WriteLine(VelocityInputSetup.new_x);
+                        Console.WriteLine(MovementInputSetup.new_x);
                         GeneralVelocity.x = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_a);
+                        Console.WriteLine(MovementInputSetup.new_a);
                         GeneralVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_t);
+                        Console.WriteLine(MovementInputSetup.new_t);
                         GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
 
                         GeneralVelocity.VelocityMaster();
@@ -55,13 +55,13 @@ namespace Calculator
                     {
                         Console.WriteLine("x = v - a * t");
 
-                        Console.WriteLine(VelocityInputSetup.new_v);
+                        Console.WriteLine(MovementInputSetup.new_v);
                         GeneralVelocity.v = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_a);
+                        Console.WriteLine(MovementInputSetup.new_a);
                         GeneralVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_t);
+                        Console.WriteLine(MovementInputSetup.new_t);
                         GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
 
                         GeneralVelocity.InitialVelocity();
@@ -79,69 +79,51 @@ namespace Calculator
                     {
                         Console.WriteLine("v = (x^2 + 2as)^0.5");
 
-                        Console.WriteLine(VelocityInputSetup.new_x);
+                        Console.WriteLine(MovementInputSetup.new_x);
                         TimelessVelocity.x = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_a);
+                        Console.WriteLine(MovementInputSetup.new_a);
                         TimelessVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_s);
+                        Console.WriteLine(MovementInputSetup.new_s);
                         TimelessVelocity.s = Convert.ToDouble(Console.ReadLine());
+
+                        TimelessVelocity.VelocityMaster();
                     }
 
                     else if (SelectVelocity == "initial")
                     {
                         Console.WriteLine("x = (v^2 - 2as)^0.5");
 
-                        Console.WriteLine(VelocityInputSetup.new_v);
+                        Console.WriteLine(MovementInputSetup.new_v);
                         TimelessVelocity.v = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_a);
+                        Console.WriteLine(MovementInputSetup.new_a);
                         TimelessVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(VelocityInputSetup.new_s);
+                        Console.WriteLine(MovementInputSetup.new_s);
                         TimelessVelocity.s = Convert.ToDouble(Console.ReadLine());
+
+                        TimelessVelocity.InitialTimelssVelocity();
                     }
                 }
 
-                else if (VelocityType == "velocity by distance")
+                else if (VelocityType == "initial velocity by distance")
                 {
-                    var VelocityByDistance = new Velocity.VelocityByDistance();
+                    var InitialVelocityByDistance = new Velocity.VelocityByDistance();
 
-                    Console.WriteLine("select final or initial velocity");
-                    string VelocityByDistanceType = Console.ReadLine();
+                    Console.WriteLine("u = s/t - at/2");
 
-                    if (VelocityByDistanceType == "final")
-                    {
-                        var GetCalculation = new Velocity.Timeless();
+                    Console.WriteLine(MovementInputSetup.new_s);
+                    InitialVelocityByDistance.u = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter initial velocity");
-                        GetCalculation.u = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(MovementInputSetup.new_t);
+                    InitialVelocityByDistance.t = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter time");
-                        GetCalculation.t = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(MovementInputSetup.new_a);
+                    InitialVelocityByDistance.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("enter accelerartion");
-                        GetCalculation.a = Convert.ToDouble(Console.ReadLine());
-
-                        GetCalculation.VelocityMaster();
-                    }
-
-                    else if (VelocityByDistanceType == "initial")
-                    {
-                        Console.WriteLine("u = s / t - at / 2");
-
-                        Console.WriteLine("enter distance");
-                        VelocityByDistance.s = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("enter time");
-                        VelocityByDistance.t = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("enter acceleration");
-                        VelocityByDistance.a = Convert.ToDouble(Console.ReadLine());
-
-                        VelocityByDistance.VelocityMaster();
-                    }
+                    InitialVelocityByDistance.VelocityMaster();
                 }
             }
 
@@ -156,13 +138,13 @@ namespace Calculator
                 {
                     Console.WriteLine("a = (v - x) / t");
 
-                    Console.WriteLine("enter velocity");
+                    Console.WriteLine(MovementInputSetup.new_v);
                     Acceleration.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_x);
                     Acceleration.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter time");
+                    Console.WriteLine(MovementInputSetup.new_t);
                     Acceleration.t = Convert.ToDouble(Console.ReadLine());
 
                     Acceleration.GeneralAcceleration();
@@ -172,28 +154,32 @@ namespace Calculator
                 {
                     Console.WriteLine("a = (v^2 - x^2) / 2s");
 
-                    Console.WriteLine("enter velocity");
+                    Console.WriteLine(MovementInputSetup.new_v);
                     Acceleration.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_x);
                     Acceleration.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter distance");
+                    Console.WriteLine(MovementInputSetup.new_s);
                     Acceleration.s = Convert.ToDouble(Console.ReadLine());
+
+                    Acceleration.TimelessAcceleration();
                 }
 
                 else if (AccelerationType == "acceleration by distance")
                 {
                     Console.WriteLine("a = 2(s - ut) / t^2");
 
-                    Console.WriteLine("enter distance");
+                    Console.WriteLine(MovementInputSetup.new_s);
                     Acceleration.s = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_u);
                     Acceleration.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter time");
+                    Console.WriteLine(MovementInputSetup.new_t);
                     Acceleration.t = Convert.ToDouble(Console.ReadLine());
+
+                    Acceleration.AccelerationByDistance();
                 }
             }
 
@@ -301,5 +287,14 @@ namespace Calculator
                 }
             }
         }
+    }
+    public class MovementSetup
+    {
+        public string new_v = "v = __";
+        public string new_x = "x = __";
+        public string new_a = "a = __";
+        public string new_s = "s = __";
+        public string new_u = "u = __";
+        public string new_t = "t = __";
     }
 }
