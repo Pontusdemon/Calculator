@@ -12,9 +12,13 @@ namespace Calculator
 
         public class Pressure : Force
         {
+            public double F;
+            public double p;
+            public double A;
             public override void MasterForce()
             {
-                throw new NotImplementedException();
+                F = p * A;
+                Console.WriteLine("F = " + F);
             }
         }
 

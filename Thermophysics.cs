@@ -108,10 +108,24 @@ namespace Calculator
                 }
             }
 
-            else if (Subject == "force")
+            else if (Subject == "force") ;
             {
-                Console.WriteLine("select force");
+                Console.WriteLine("select force type");
                 string ForceType = Console.ReadLine();
+
+                if (ForceType == "pressure")
+                {
+                    Console.WriteLine("F = p * A");
+                    var PressureForce = new Force.Pressure();
+
+                    Console.WriteLine(InputSetup.new_p);
+                    PressureForce.p = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_A);
+                    PressureForce.A = Convert.ToDouble(Console.ReadLine());
+
+                    PressureForce.MasterForce();
+                }
             }
         }
 
