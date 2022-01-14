@@ -18,42 +18,48 @@ namespace Calculator
         double FL;
 
         public void GeneralDensity()
-            // d = m / V
+        // d = m / V
         {
-            Console.WriteLine("enter mass");
+            var InputSetup = new ThermophysicsInputSetup();
+
+            Console.WriteLine(InputSetup.new_m);
             m = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("enter volume");
+            Console.WriteLine(InputSetup.new_V);
             V = Convert.ToDouble(Console.ReadLine());
 
             d = m / V;
-            Console.WriteLine("density = " + d);
+            Console.WriteLine("d = " + d);
         }
 
         public void FluidDensity()
         // d = p / (g * h)
         {
-            Console.WriteLine("enter pressure");
+            var InputSetup = new ThermophysicsInputSetup();
+
+            Console.WriteLine(InputSetup.new_p);
             p = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("enter deaph");
+            Console.WriteLine(InputSetup.new_h);
             h = Convert.ToDouble(Console.ReadLine());
 
             d = p / (g * h);
-            Console.WriteLine("fluid density = " + d);
+            Console.WriteLine("d = " + d);
         }
 
         public void ArkimedesDensity()
         // d = FL / (g * V)
         {
-            Console.WriteLine("enter lift force");
+            var InputSetup = new ThermophysicsInputSetup();
+
+            Console.WriteLine(InputSetup.new_FL);
             FL = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("enter volume");
+            Console.WriteLine(InputSetup.new_V);
             V = Convert.ToDouble(Console.ReadLine());
 
             d = FL / (g * V);
-            Console.WriteLine("density = " + d);
+            Console.WriteLine("d = " + d);
         }
     }
 }

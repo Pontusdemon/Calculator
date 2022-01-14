@@ -193,10 +193,10 @@ namespace Calculator
                 {
                     Console.WriteLine("s = v * t");
 
-                    Console.WriteLine("enter velocity");
+                    Console.WriteLine(MovementInputSetup.new_v);
                     Distance.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter time");
+                    Console.WriteLine(MovementInputSetup.new_t);
                     Distance.t = Convert.ToDouble(Console.ReadLine());
 
                     Distance.DistanceByAverageVelocity();
@@ -206,13 +206,13 @@ namespace Calculator
                 {
                     Console.WriteLine("s = (v^2 + x^2) / 2a");
 
-                    Console.WriteLine("enter velocity");
+                    Console.WriteLine(MovementInputSetup.v);
                     Distance.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_x);
                     Distance.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter acceleration");
+                    Console.WriteLine(MovementInputSetup.new_a);
                     Distance.a = Convert.ToDouble(Console.ReadLine());
 
                     Distance.TimelessDistance();
@@ -222,13 +222,13 @@ namespace Calculator
                 {
                     Console.WriteLine("s = ut + (at^2) / 2");
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_u);
                     Distance.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter time");
+                    Console.WriteLine(MovementInputSetup.new_t);
                     Distance.t = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter acceleration");
+                    Console.WriteLine(MovementInputSetup.new_a);
                     Distance.a = Convert.ToDouble(Console.ReadLine());
 
                     Distance.DistanceDistance();
@@ -245,10 +245,10 @@ namespace Calculator
                 {
                     Console.WriteLine("t = s / v");
 
-                    Console.WriteLine("enter distance");
+                    Console.WriteLine(MovementInputSetup.new_s);
                     Time.s = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter velocity");
+                    Console.WriteLine(MovementInputSetup.new_v);
                     Time.v = Convert.ToDouble(Console.ReadLine());
 
                     Time.TimeByAverageVelocity();
@@ -258,13 +258,13 @@ namespace Calculator
                 {
                     Console.WriteLine("t = (v - x) / a");
 
-                    Console.WriteLine("enter velocity");
+                    Console.WriteLine(MovementInputSetup.new_v);
                     Time.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_x);
                     Time.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("entter acceleration");
+                    Console.WriteLine(MovementInputSetup.new_a);
                     Time.a = Convert.ToDouble(Console.ReadLine());
 
                     Time.TimeByAcceleration();
@@ -274,13 +274,13 @@ namespace Calculator
                 {
                     Console.WriteLine("t = (-u + (u^2 + 2as)^0.5) /a");
 
-                    Console.WriteLine("enter initial velocity");
+                    Console.WriteLine(MovementInputSetup.new_u);
                     Time.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter acceleration");
+                    Console.WriteLine(MovementInputSetup.new_a);
                     Time.a = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter distance");
+                    Console.WriteLine(MovementInputSetup.new_s);
                     Time.s = Convert.ToDouble(Console.ReadLine());
 
                     Time.TimeByDistance();

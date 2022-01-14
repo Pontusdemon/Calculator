@@ -19,19 +19,19 @@ namespace Calculator
         public void DistanceByAverageVelocity()
         {
             s = v * t;
-            Console.WriteLine("distance = " + s);
+            Console.WriteLine("s = " + s);
         }
 
         public void TimelessDistance()
         {
             s = (Math.Pow(v, 2) - Math.Pow(x, 2)) / (2 * a);
-            Console.WriteLine("distance = " + s);
+            Console.WriteLine("s = " + s);
         }
 
         public void DistanceDistance()
         {
             s = (u * t) + ((a * Math.Pow(t, 2)) / 2);
-            Console.WriteLine("distance = " + s);
+            Console.WriteLine("s = " + s);
         }
     }
 }
