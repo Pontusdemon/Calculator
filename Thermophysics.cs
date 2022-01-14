@@ -108,7 +108,7 @@ namespace Calculator
                 }
             }
 
-            else if (Subject == "force") ;
+            else if (Subject == "force")
             {
                 Console.WriteLine("select force type");
                 string ForceType = Console.ReadLine();
@@ -125,6 +125,20 @@ namespace Calculator
                     PressureForce.A = Convert.ToDouble(Console.ReadLine());
 
                     PressureForce.MasterForce();
+                }
+
+                else if (ForceType == "lift force")
+                {
+                    Console.WriteLine("FL = dgV");
+                    var LiftForce = new Force.Lift();
+
+                    Console.WriteLine(InputSetup.new_d);
+                    LiftForce.d = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_V);
+                    LiftForce.V = Convert.ToDouble(Console.ReadLine());
+
+                    LiftForce.MasterForce();
                 }
             }
         }

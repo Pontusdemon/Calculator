@@ -22,6 +22,20 @@ namespace Calculator
             }
         }
 
+        public class Lift : Force
+        {
+            public double FL;
+            public double d;
+            public double g = 9.82;
+            public double V;
+
+            public override void MasterForce()
+            {
+                FL = d * g * V;
+                Console.WriteLine("FL = " + FL);
+            }
+        }
+
         // pressure
         // lift
         // force
