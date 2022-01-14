@@ -206,7 +206,7 @@ namespace Calculator
                 {
                     Console.WriteLine("s = (v^2 + x^2) / 2a");
 
-                    Console.WriteLine(MovementInputSetup.v);
+                    Console.WriteLine(MovementInputSetup.new_v);
                     Distance.v = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine(MovementInputSetup.new_x);

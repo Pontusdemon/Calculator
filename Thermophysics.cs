@@ -12,6 +12,7 @@ namespace Calculator
         {
             Console.WriteLine("select thermophysics area");
             string Subject = Console.ReadLine();
+            var InputSetup = new ThermophysicsInputSetup();
 
             if (Subject == "density")
             {
@@ -34,14 +35,14 @@ namespace Calculator
 
                 else if (DensityType == "arkimedes")
                 {
-                    Console.WriteLine("d = FL / (g * v)");
+                    Console.WriteLine("d = FL / (g * V)");
                     Density.ArkimedesDensity();
                 }
             }
 
             else if (Subject == "pressure")
             {
-                Console.WriteLine("enter pressure type");
+                Console.WriteLine("select pressure type");
                 string PressureType = Console.ReadLine();
 
                 if (PressureType == "defined")
@@ -49,10 +50,10 @@ namespace Calculator
                     Console.WriteLine("p = F / A");
                     var DefinedPressure = new Pressure.Defined();
 
-                    Console.WriteLine("enter force");
+                    Console.WriteLine(InputSetup.new_F);
                     DefinedPressure.F = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter area");
+                    Console.WriteLine(InputSetup.new_A);
                     DefinedPressure.A = Convert.ToDouble(Console.ReadLine());
 
                     DefinedPressure.Master();
@@ -63,13 +64,10 @@ namespace Calculator
                     Console.WriteLine("p = dgh");
                     var FluidPressure = new Pressure.Fluid();
 
-                    Console.WriteLine("enter density");
+                    Console.WriteLine(InputSetup.new_d);
                     FluidPressure.d = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("enter gravity");
-                    FluidPressure.g = double.TryParse(Console.ReadLine(), out double g) ? g : 9.82;
-
-                    Console.WriteLine("enter fluid deaph");
+                    Console.WriteLine(InputSetup.new_h);
                     FluidPressure.h = Convert.ToDouble(Console.ReadLine());
 
                     FluidPressure.Master();
@@ -77,16 +75,44 @@ namespace Calculator
 
                 else if (PressureType == "external")
                 {
+                    Console.WriteLine("x = p - dgh");
+                    var ExternalPressure = new Pressure.External();
 
+                    Console.WriteLine(InputSetup.new_p);
+                    ExternalPressure.p = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_d);
+                    ExternalPressure.d = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_h);
+                    ExternalPressure.h = Convert.ToDouble(Console.ReadLine());
+
+                    ExternalPressure.Master();
                 }
 
                 else if (PressureType == "gas")
                 {
                     Console.WriteLine("p = (k * T) / V");
+                    var GasPressure = new Pressure.GeneralGaslaw();
+
+                    Console.WriteLine(InputSetup.new_k);
+                    GasPressure.k = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_T);
+                    GasPressure.T = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_V);
+                    GasPressure.V = Convert.ToDouble(Console.ReadLine());
+
+                    GasPressure.Master();
                 }
             }
-
         }
+
+        // mass
+        // volume
+        // force
+        // Temperature
     }
 
     public class ThermophysicsInputSetup

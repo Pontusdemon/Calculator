@@ -51,6 +51,7 @@ namespace Calculator
             public override void Master()
             {
                 x = p - (d * g * h);
+                Console.WriteLine("p = " + p);
             }
         }
 
@@ -64,6 +65,7 @@ namespace Calculator
             public override void Master()
             {
                 p = (k * T) / V;
+                Console.WriteLine("p = " + p);
             }
         }
     }
