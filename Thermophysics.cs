@@ -107,6 +107,12 @@ namespace Calculator
                     GasPressure.Master();
                 }
             }
+
+            else if (Subject == "force")
+            {
+                Console.WriteLine("select force");
+                string ForceType = Console.ReadLine();
+            }
         }
 
         // mass
