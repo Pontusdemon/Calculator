@@ -129,23 +129,28 @@ namespace Calculator
 
                 else if (ForceType == "lift force")
                 {
-                    Console.WriteLine("FL = dgV");
-                    var LiftForce = new Force.Lift();
+                    var Arkimedes = new Force.Arkimedes();
+                    Console.WriteLine("FL = d * g * V");
 
                     Console.WriteLine(InputSetup.new_d);
-                    LiftForce.d = Convert.ToDouble(Console.ReadLine());
+                    Arkimedes.d = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine(InputSetup.new_V);
-                    LiftForce.V = Convert.ToDouble(Console.ReadLine());
+                    Arkimedes.V = Convert.ToDouble(Console.ReadLine());
 
-                    LiftForce.MasterForce();
+                    Arkimedes.MasterForce();
                 }
+            }
+
+            else if (Subject == "volume")
+            {
+                Console.WriteLine("select how to calculate volume");
+                string VolumeCalculation = Console.ReadLine();
             }
         }
 
         // mass
         // volume
-        // force
         // Temperature
     }
 

@@ -22,7 +22,7 @@ namespace Calculator
             }
         }
 
-        public class Lift : Force
+        public class Arkimedes : Force
         {
             public double FL;
             public double d;
