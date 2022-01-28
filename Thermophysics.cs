@@ -197,13 +197,6 @@ namespace Calculator
             {
                 var GetMass = new Mass();
                 Console.WriteLine("m = d * V");
-
-                Console.WriteLine(InputSetup.new_d);
-                GetMass.d = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine(InputSetup.new_m);
-                GetMass.V = Convert.ToDouble(Console.ReadLine());
-
                 GetMass.MassByDensity();
             }
 

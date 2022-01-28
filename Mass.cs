@@ -15,6 +15,12 @@ namespace Calculator
 
         public void MassByDensity()
         {
+            Console.WriteLine("d = __");
+            d = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("V = __");
+            V = Convert.ToDouble(Console.ReadLine());
+
             m = d * V;
             Console.WriteLine("m = " + m);
         }
