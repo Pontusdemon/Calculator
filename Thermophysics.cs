@@ -146,11 +146,84 @@ namespace Calculator
             {
                 Console.WriteLine("select how to calculate volume");
                 string VolumeCalculation = Console.ReadLine();
+
+                if (VolumeCalculation == "density")
+                {
+                    var VolumeByDensity = new Volume.Density();
+                    Console.WriteLine("V = m / d");
+
+                    Console.WriteLine(InputSetup.new_m);
+                    VolumeByDensity.m = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_d);
+                    VolumeByDensity.d = Convert.ToDouble(Console.ReadLine());
+
+                    VolumeByDensity.MasterVolume();
+                }
+
+                else if (VolumeCalculation == "arkimedes")
+                {
+                    var ArkimedesVolume = new Volume.Arkimedes();
+                    Console.WriteLine("V = FL / (d * g)");
+
+                    Console.WriteLine(InputSetup.new_FL);
+                    ArkimedesVolume.FL = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_d);
+                    ArkimedesVolume.d = Convert.ToDouble(Console.ReadLine());
+
+                    ArkimedesVolume.MasterVolume();
+                }
+
+                else if (VolumeCalculation == "general gaslaw")
+                {
+                    var VolumeByGeneralGaslaw = new Volume.GeneralGaslaw();
+                    Console.WriteLine("V = (k * T) / p");
+
+                    Console.WriteLine(InputSetup.new_k);
+                    VolumeByGeneralGaslaw.k = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_T);
+                    VolumeByGeneralGaslaw.T = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_p);
+                    VolumeByGeneralGaslaw.p = Convert.ToDouble(Console.ReadLine());
+
+                    VolumeByGeneralGaslaw.MasterVolume();
+                }
+            }
+
+            else if (Subject == "mass")
+            {
+                var GetMass = new Mass();
+                Console.WriteLine("m = d * V");
+
+                Console.WriteLine(InputSetup.new_d);
+                GetMass.d = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine(InputSetup.new_m);
+                GetMass.V = Convert.ToDouble(Console.ReadLine());
+
+                GetMass.MassByDensity();
+            }
+
+            else if (Subject == "deaph")
+            {
+
+            }
+
+            else if (Subject == "area")
+            {
+
+            }
+
+            else if (Subject == "temperature")
+            {
+
             }
         }
 
         // mass
-        // volume
         // Temperature
     }
 
