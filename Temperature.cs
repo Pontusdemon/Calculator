@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class Temperature
+    public class Temperature
     {
+        // T = (p * V) / k;
+
+        public double T;
+        public double p;
+        public double V;
+        public double k;
+
+        public void TemperatureByGeneralGaslaw()
+        {
+            T = (p * V) / k;
+            Console.WriteLine("T = " + T);
+        }
     }
 }

@@ -11,14 +11,14 @@ namespace Calculator
 
             if (Subject == "movement")
             {
-                var Movement = new Movement();
-                Movement.MovementSelector();
+                var GetMovement = new Movement();
+                GetMovement.MovementSelector();
             }
 
             else if (Subject == "thermophysics")
             {
-                var Thermophysics = new Thermophysics();
-                Thermophysics.ThermophysicsSelector();
+                var GetThermophysics = new Thermophysics();
+                GetThermophysics.ThermophysicsSelector();
             }
         }
     }

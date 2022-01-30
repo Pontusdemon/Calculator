@@ -26,10 +26,9 @@ namespace Calculator
         public class Fluid : Pressure
         {
             public double p;
-
             public double x;
             public double d;
-            public double g;
+            public double g = 9.82;
             public double h;
 
             public override void Master()
@@ -45,7 +44,7 @@ namespace Calculator
 
             public double p;
             public double d;
-            public double g;
+            public double g = 9.82;
             public double h;
 
             public override void Master()

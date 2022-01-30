@@ -202,17 +202,32 @@ namespace Calculator
 
             else if (Subject == "deaph")
             {
-
+                var GetDeaph = new Deaph();
+                Console.WriteLine("h = p / (d * g)");
+                GetDeaph.DeaphByFluidPressure();
             }
 
             else if (Subject == "area")
             {
+                var GetArea = new Area.Pressure();
 
             }
 
             else if (Subject == "temperature")
             {
+                var GetTemperature = new Temperature();
+                Console.WriteLine("T = (p * V) / k");
 
+                Console.WriteLine(InputSetup.new_p);
+                GetTemperature.p = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine(InputSetup.new_V);
+                GetTemperature.V = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine(InputSetup.new_k);
+                GetTemperature.k = Convert.ToDouble(Console.ReadLine());
+
+                GetTemperature.TemperatureByGeneralGaslaw();
             }
         }
 

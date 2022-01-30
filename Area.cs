@@ -8,6 +8,9 @@ namespace Calculator
 {
     public abstract class Area
     {
+        public class Pressure : Area
+        {
 
+        }
     }
 }
