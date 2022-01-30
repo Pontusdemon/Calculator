@@ -10,7 +10,15 @@ namespace Calculator
     {
         public class Pressure : Area
         {
+            public double A;
+            public double F;
+            public double p;
 
+            public void PressureArea()
+            {
+                A = F / p;
+                Console.WriteLine("A = " + A);
+            }
         }
     }
 }
