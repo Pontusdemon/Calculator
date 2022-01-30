@@ -210,7 +210,15 @@ namespace Calculator
             else if (Subject == "area")
             {
                 var GetArea = new Area.Pressure();
+                Console.WriteLine("A = F / p");
 
+                Console.WriteLine(InputSetup.new_F);
+                GetArea.F = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine(InputSetup.new_p);
+                GetArea.p = Convert.ToDouble(Console.ReadLine());
+
+                GetArea.PressureArea();
             }
 
             else if (Subject == "temperature")
