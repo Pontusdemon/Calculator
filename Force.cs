@@ -36,11 +36,25 @@ namespace Calculator
             }
         }
 
-        // pressure
-        // lift
-        // force
+        public class Master : Force
+        {
+            public override void MasterForce()
+            {
+                
+            }
+        }
+
+        public class Friktion : Force
+        {
+            public override void MasterForce()
+            {
+                
+            }
+        }
+
+
+
         // forcemoment
-        // Friktion
         // work
         // hookes law
     }

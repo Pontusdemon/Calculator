@@ -238,9 +238,6 @@ namespace Calculator
                 GetTemperature.TemperatureByGeneralGaslaw();
             }
         }
-
-        // mass
-        // Temperature
     }
 
     public class ThermophysicsInputSetup

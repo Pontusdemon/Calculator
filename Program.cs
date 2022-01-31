@@ -20,6 +20,12 @@ namespace Calculator
                 var GetThermophysics = new Thermophysics();
                 GetThermophysics.ThermophysicsSelector();
             }
+
+            else if (Subject == "force and energy")
+            {
+                var GetForceEnergy = new ForceEnergy();
+                GetForceEnergy.ForceEnergySetup();
+            }
         }
     }
 }
