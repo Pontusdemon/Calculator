@@ -15,12 +15,26 @@ namespace Calculator
 
             if (ForceEnergySubject == "force")
             {
+                Console.WriteLine("enter force type");
+                string ForceType = Console.ReadLine();
 
+                if (ForceType == "")
+                {
+
+                }
             }
 
             else if (ForceEnergySubject == "energy")
             {
-                
+                Console.WriteLine("select energy type");
+                string EnergyType = Console.ReadLine();
+
+                if (EnergyType == "potential")
+                {
+                    var PotentialEnergy = new Energy.Potential();
+
+
+                }
             }
         }
     }
