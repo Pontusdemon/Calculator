@@ -12,7 +12,7 @@ namespace Calculator
         {
             Console.WriteLine("select thermophysics area");
             string Subject = Console.ReadLine();
-            var InputSetup = new ThermophysicsInputSetup();
+            var InputSetup = new ProgramSetup();
 
             if (Subject == "density")
             {
@@ -238,20 +238,5 @@ namespace Calculator
                 GetTemperature.TemperatureByGeneralGaslaw();
             }
         }
-    }
-
-    public class ThermophysicsInputSetup
-    {
-        public string new_d = "d = __";
-        public string new_m = "m = __";
-        public string new_V = "V = __";
-        public string new_p = "p = __";
-        public string new_h = "h = __";
-        public string new_FL = "FL = __";
-        public string new_F = "F = __";
-        public string new_A = "A = __";
-        public string new_k = "k = __";
-        public string new_T = "T = __";
-        public string new_g = "g = __";
     }
 }

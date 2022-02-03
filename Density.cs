@@ -20,7 +20,7 @@ namespace Calculator
         public void GeneralDensity()
         // d = m / V
         {
-            var InputSetup = new ThermophysicsInputSetup();
+            var InputSetup = new ProgramSetup();
 
             Console.WriteLine(InputSetup.new_m);
             m = Convert.ToDouble(Console.ReadLine());
@@ -35,7 +35,7 @@ namespace Calculator
         public void FluidDensity()
         // d = p / (g * h)
         {
-            var InputSetup = new ThermophysicsInputSetup();
+            var InputSetup = new ProgramSetup();
 
             Console.WriteLine(InputSetup.new_p);
             p = Convert.ToDouble(Console.ReadLine());
@@ -50,7 +50,7 @@ namespace Calculator
         public void ArkimedesDensity()
         // d = FL / (g * V)
         {
-            var InputSetup = new ThermophysicsInputSetup();
+            var InputSetup = new ProgramSetup();
 
             Console.WriteLine(InputSetup.new_FL);
             FL = Convert.ToDouble(Console.ReadLine());

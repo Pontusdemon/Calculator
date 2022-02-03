@@ -102,8 +102,8 @@ namespace Calculator
 
             public override void MasterForce()
             {
-                M = F * l;
-                Console.WriteLine("M = " + M);
+                F = M / l;
+                Console.WriteLine("F = " + F);
             }
         }
     }

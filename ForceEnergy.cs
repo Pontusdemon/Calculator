@@ -10,6 +10,8 @@ namespace Calculator
     {
         public void ForceEnergySetup()
         {
+            var InputSetup = new ProgramSetup();
+
             Console.WriteLine("select subject area");
             string ForceEnergySubject = Console.ReadLine();
 
@@ -18,9 +20,19 @@ namespace Calculator
                 Console.WriteLine("enter force type");
                 string ForceType = Console.ReadLine();
 
-                if (ForceType == "")
+                if (ForceType == "general")
                 {
+                    var GeneralForce = new Force.Master();
 
+                    Console.WriteLine("F = m * a");
+
+                    Console.WriteLine(InputSetup.new_m);
+                    GeneralForce.m = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_a);
+                    GeneralForce.a = Convert.ToDouble(Console.ReadLine());
+
+                    GeneralForce.MasterForce();
                 }
             }
 

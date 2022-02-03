@@ -10,7 +10,7 @@ namespace Calculator
     {
         public void MovementSelector()
         {
-            var MovementInputSetup = new MovementSetup();
+            var MovementInputSetup = new ProgramSetup();
 
             Console.WriteLine("select movement type");
             string MovementType = Console.ReadLine();
@@ -287,14 +287,5 @@ namespace Calculator
                 }
             }
         }
-    }
-    public class MovementSetup
-    {
-        public string new_v = "v = __";
-        public string new_x = "x = __";
-        public string new_a = "a = __";
-        public string new_s = "s = __";
-        public string new_u = "u = __";
-        public string new_t = "t = __";
     }
 }
