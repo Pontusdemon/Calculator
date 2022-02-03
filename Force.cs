@@ -57,12 +57,14 @@ namespace Calculator
 
         public class Friktion : Force
         {
-            public double F1;
+            public double Ff;
             public double Fn;
+            public double friktion_k;
 
             public override void MasterForce()
             {
-                
+                Ff = friktion_k * Fn;
+                Console.WriteLine("Ff = " + Ff);
             }
         }
 
@@ -104,11 +106,5 @@ namespace Calculator
                 Console.WriteLine("M = " + M);
             }
         }
-
-
-
-        // forcemoment
-        // work
-        // hookes law
     }
 }

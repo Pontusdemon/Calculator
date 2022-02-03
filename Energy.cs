@@ -8,12 +8,20 @@ namespace Calculator
 {
     public abstract class Energy
     {
+        public abstract void MasterEnergy();
+
         public class Potential : Energy
         {
             public double Ep;
             public double m;
             public double g = 9.82;
             public double h;
+
+            public override void MasterEnergy()
+            {
+                Ep = m * g * h;
+                Console.WriteLine("Ep = " + Ep);
+            }
 
             public class Gravitationfield : Potential
             {
@@ -22,10 +30,23 @@ namespace Calculator
                 public double m2;
                 public double r;
 
-
+                public override void MasterEnergy()
+                {
+                    Ep = -G * (m1 * m2) / r;
+                    Console.WriteLine("Ep = " + Ep);
+                }
             }
 
-            // fjäder
+            public class Spring : Potential
+            {
+                public double k;
+                public double dl;
+
+                public override void MasterEnergy()
+                {
+                    
+                }
+            }
         }
 
         public class Kinetic : Energy
@@ -34,7 +55,11 @@ namespace Calculator
             public double m;
             public double v;
 
-
+            public override void MasterEnergy()
+            {
+                Ek = (m * Math.Pow(v, 2)) / 2;
+                Console.WriteLine("Ek = " + Ek);
+            }
         }
 
         public class Total : Energy
@@ -42,6 +67,12 @@ namespace Calculator
             public double E;
             public double k;
             public double A;
+
+            public override void MasterEnergy()
+            {
+                E = (k * Math.Pow(A, 2)) / 2;
+                Console.WriteLine("E = " + E);
+            }
         }
     }
 }
