@@ -59,12 +59,18 @@ namespace Calculator
         {
             public double Ff;
             public double Fn;
-            public double friktion_k;
+            public double µ;
 
             public override void MasterForce()
             {
-                Ff = friktion_k * Fn;
+                Ff = µ * Fn;
                 Console.WriteLine("Ff = " + Ff);
+            }
+
+            public void NormalFriktionForce()
+            {
+                Fn = Ff / µ;
+                Console.WriteLine("Fn = " + Fn);
             }
         }
 
@@ -72,11 +78,12 @@ namespace Calculator
         {
             public double F;
             public double k;
-            public double dl;
+            public double l1;
+            public double l2;
 
             public override void MasterForce()
             {
-                F = k * dl;
+                F = k * (l2 - l1);
                 Console.WriteLine("F = " + F);
             }
         }

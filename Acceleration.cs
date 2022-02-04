@@ -9,12 +9,12 @@ namespace Calculator
     public class Acceleration
     {
         public double a;
-        public double v;
-        public double x;
+        public double g;
+        public double s;
         public double t;
         public double u;
-        public double s;
-        public double g;
+        public double v;
+        public double x;
 
         public void GeneralAcceleration()
         {

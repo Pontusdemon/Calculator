@@ -34,6 +34,26 @@ namespace Calculator
 
                     GeneralForce.MasterForce();
                 }
+
+                else if (ForceType == "friktion")
+                {
+                    var FriktionForce = new Force.Friktion();
+                    Console.WriteLine("Ff = µ * Fn");
+
+                    Console.WriteLine(InputSetup.new_µ);
+                    FriktionForce.µ = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_Fn);
+                    FriktionForce.Fn = Convert.ToDouble(Console.ReadLine());
+
+                    FriktionForce.MasterForce();
+                }
+
+                else if (ForceType == "normal friktion")
+                {
+                    var NormalFriktion = new Force.Friktion();
+                    
+                }
             }
 
             else if (ForceEnergySubject == "energy")

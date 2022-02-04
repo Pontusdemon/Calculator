@@ -18,7 +18,7 @@ namespace Calculator
 
             public override void VelocityMaster()
             {
-                var GetVelocitySetup = new MovementSetup();
+                var GetVelocitySetup = new ProgramSetup();
 
                 Console.WriteLine(GetVelocitySetup.new_s);
                 s = Convert.ToDouble(Console.ReadLine());

@@ -40,11 +40,15 @@ namespace Calculator
             public class Spring : Potential
             {
                 public double k;
+                public double l1;
+                public double l2;
                 public double dl;
 
                 public override void MasterEnergy()
                 {
-                    
+                    dl = l2 - l1;
+                    Ep = (k * Math.Pow(dl, 2)) / 2;
+                    Console.WriteLine("Ep = " + Ep);
                 }
             }
         }

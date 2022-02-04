@@ -8,7 +8,7 @@ namespace Calculator
 {
     public class Density
     {
-        double d; // Density
+        double ρ; // Density
 
         double m;
         double V;
@@ -28,8 +28,8 @@ namespace Calculator
             Console.WriteLine(InputSetup.new_V);
             V = Convert.ToDouble(Console.ReadLine());
 
-            d = m / V;
-            Console.WriteLine("d = " + d);
+            ρ = m / V;
+            Console.WriteLine("ρ = " + ρ);
         }
 
         public void FluidDensity()
@@ -43,8 +43,8 @@ namespace Calculator
             Console.WriteLine(InputSetup.new_h);
             h = Convert.ToDouble(Console.ReadLine());
 
-            d = p / (g * h);
-            Console.WriteLine("d = " + d);
+            ρ = p / (g * h);
+            Console.WriteLine("ρ = " + ρ);
         }
 
         public void ArkimedesDensity()
@@ -58,8 +58,8 @@ namespace Calculator
             Console.WriteLine(InputSetup.new_V);
             V = Convert.ToDouble(Console.ReadLine());
 
-            d = FL / (g * V);
-            Console.WriteLine("d = " + d);
+            ρ = FL / (g * V);
+            Console.WriteLine("ρ = " + ρ);
         }
     }
 }

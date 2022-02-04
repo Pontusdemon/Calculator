@@ -41,5 +41,8 @@ namespace Calculator
         public string new_v0 = "v0 = __";
 
         public string new_x = "x = __";
+
+        public string new_µ = "µ = __";
+        public string new_ρ = "ρ = __";
     }
 }

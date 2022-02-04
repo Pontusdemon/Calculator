@@ -10,10 +10,10 @@ namespace Calculator
     {
         // h = p / (d * g);
 
+        public double g = 9.82;
         public double h;
         public double p;
-        public double d;
-        public double g = 9.82;
+        public double ρ;
 
         public void DeaphByFluidPressure()
         {
@@ -21,9 +21,9 @@ namespace Calculator
             p = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("d = __");
-            d = Convert.ToDouble(Console.ReadLine());
+            ρ = Convert.ToDouble(Console.ReadLine());
 
-            h = p / (d * g);
+            h = p / (ρ * g);
             Console.WriteLine("h = " + h);
         }
     }
