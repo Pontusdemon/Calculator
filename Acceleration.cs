@@ -9,7 +9,6 @@ namespace Calculator
     public class Acceleration
     {
         public double a;
-        public double g;
         public double s;
         public double t;
         public double u;

@@ -25,13 +25,13 @@ namespace Calculator
         public class Arkimedes : Force
         {
             public double FL;
-            public double d;
+            public double ρ;
             public double g = 9.82;
             public double V;
 
             public override void MasterForce()
             {
-                FL = d * g * V;
+                FL = ρ * g * V;
                 Console.WriteLine("FL = " + FL);
             }
         }

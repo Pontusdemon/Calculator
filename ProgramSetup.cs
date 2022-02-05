@@ -38,7 +38,6 @@ namespace Calculator
 
         public string new_v = "v = __";
         public string new_V = "V = __";
-        public string new_v0 = "v0 = __";
 
         public string new_x = "x = __";
 

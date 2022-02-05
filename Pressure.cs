@@ -27,13 +27,13 @@ namespace Calculator
         {
             public double p;
             public double x;
-            public double d;
+            public double ρ;
             public double g = 9.82;
             public double h;
 
             public override void Master()
             {
-                p = x + (d * g * h);
+                p = x + (ρ * g * h);
                 Console.WriteLine("p = " + p);
             }
         }
@@ -43,13 +43,13 @@ namespace Calculator
             public double x;
 
             public double p;
-            public double d;
+            public double ρ;
             public double g = 9.82;
             public double h;
 
             public override void Master()
             {
-                x = p - (d * g * h);
+                x = p - (ρ * g * h);
                 Console.WriteLine("p = " + p);
             }
         }

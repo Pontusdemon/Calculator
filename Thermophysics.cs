@@ -23,19 +23,19 @@ namespace Calculator
 
                 if (DensityType == "general")
                 {
-                    Console.WriteLine("d = m / V");
+                    Console.WriteLine("ρ = m / V");
                     Density.GeneralDensity();
                 }
 
                 else if (DensityType == "fluid")
                 {
-                    Console.WriteLine("d = p / (g * h)");
+                    Console.WriteLine("ρ = p / (g * h)");
                     Density.FluidDensity();
                 }
 
                 else if (DensityType == "arkimedes")
                 {
-                    Console.WriteLine("d = FL / (g * V)");
+                    Console.WriteLine("ρ = FL / (g * V)");
                     Density.ArkimedesDensity();
                 }
             }
@@ -61,11 +61,11 @@ namespace Calculator
 
                 else if (PressureType == "fluid")
                 {
-                    Console.WriteLine("p = dgh");
+                    Console.WriteLine("p = ρgh");
                     var FluidPressure = new Pressure.Fluid();
 
-                    Console.WriteLine(InputSetup.new_d);
-                    FluidPressure.d = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(InputSetup.new_ρ);
+                    FluidPressure.ρ = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine(InputSetup.new_h);
                     FluidPressure.h = Convert.ToDouble(Console.ReadLine());
@@ -75,14 +75,14 @@ namespace Calculator
 
                 else if (PressureType == "external")
                 {
-                    Console.WriteLine("x = p - dgh");
+                    Console.WriteLine("x = p - ρgh");
                     var ExternalPressure = new Pressure.External();
 
                     Console.WriteLine(InputSetup.new_p);
                     ExternalPressure.p = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(InputSetup.new_d);
-                    ExternalPressure.d = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(InputSetup.new_ρ);
+                    ExternalPressure.ρ = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine(InputSetup.new_h);
                     ExternalPressure.h = Convert.ToDouble(Console.ReadLine());
@@ -130,10 +130,10 @@ namespace Calculator
                 else if (ForceType == "lift force")
                 {
                     var Arkimedes = new Force.Arkimedes();
-                    Console.WriteLine("FL = d * g * V");
+                    Console.WriteLine("FL = ρ * g * V");
 
-                    Console.WriteLine(InputSetup.new_d);
-                    Arkimedes.d = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(InputSetup.new_ρ);
+                    Arkimedes.ρ = Convert.ToDouble(Console.ReadLine());
 
                     Console.WriteLine(InputSetup.new_V);
                     Arkimedes.V = Convert.ToDouble(Console.ReadLine());
@@ -150,7 +150,7 @@ namespace Calculator
                 if (VolumeCalculation == "density")
                 {
                     var VolumeByDensity = new Volume.Density();
-                    Console.WriteLine("V = m / d");
+                    Console.WriteLine("V = m / ρ");
 
                     Console.WriteLine(InputSetup.new_m);
                     VolumeByDensity.m = Convert.ToDouble(Console.ReadLine());
@@ -164,13 +164,13 @@ namespace Calculator
                 else if (VolumeCalculation == "arkimedes")
                 {
                     var ArkimedesVolume = new Volume.Arkimedes();
-                    Console.WriteLine("V = FL / (d * g)");
+                    Console.WriteLine("V = FL / (ρ * g)");
 
                     Console.WriteLine(InputSetup.new_FL);
                     ArkimedesVolume.FL = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(InputSetup.new_d);
-                    ArkimedesVolume.d = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine(InputSetup.new_ρ);
+                    ArkimedesVolume.ρ = Convert.ToDouble(Console.ReadLine());
 
                     ArkimedesVolume.MasterVolume();
                 }
@@ -196,7 +196,7 @@ namespace Calculator
             else if (Subject == "mass")
             {
                 var GetMass = new Mass();
-                Console.WriteLine("m = d * V");
+                Console.WriteLine("m = ρ * V");
                 GetMass.MassByDensity();
             }
 

@@ -52,7 +52,15 @@ namespace Calculator
                 else if (ForceType == "normal friktion")
                 {
                     var NormalFriktion = new Force.Friktion();
-                    
+                    Console.WriteLine("Fn = Ff / µ");
+
+                    Console.WriteLine(InputSetup.new_Ff);
+                    NormalFriktion.Ff = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_µ);
+                    NormalFriktion.µ = Convert.ToDouble(Console.ReadLine());
+
+                    NormalFriktion.NormalFriktionForce();
                 }
             }
 

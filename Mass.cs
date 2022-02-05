@@ -10,18 +10,18 @@ namespace Calculator
     {
         public double m;
 
-        public double d;
+        public double ρ;
         public double V;
 
         public void MassByDensity()
         {
-            Console.WriteLine("d = __");
-            d = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("ρ = __");
+            ρ = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("V = __");
             V = Convert.ToDouble(Console.ReadLine());
 
-            m = d * V;
+            m = ρ * V;
             Console.WriteLine("m = " + m);
         }
     }

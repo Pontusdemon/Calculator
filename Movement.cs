@@ -10,7 +10,7 @@ namespace Calculator
     {
         public void MovementSelector()
         {
-            var MovementInputSetup = new ProgramSetup();
+            var InputSetup = new ProgramSetup();
 
             Console.WriteLine("select movement type");
             string MovementType = Console.ReadLine();
@@ -22,9 +22,15 @@ namespace Calculator
 
                 if (VelocityType == "average")
                 {
+                    var AverageVelocity = new Velocity.Average();
                     Console.WriteLine("v = s / t");
 
-                    var AverageVelocity = new Velocity.Average();
+                    Console.WriteLine(InputSetup.new_s);
+                    AverageVelocity.s = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine(InputSetup.new_t);
+                    AverageVelocity.t = Convert.ToDouble(Console.ReadLine());
+
                     AverageVelocity.VelocityMaster();
                 }
 
@@ -39,13 +45,13 @@ namespace Calculator
                     {
                         Console.WriteLine("v = x + a * t");
 
-                        Console.WriteLine(MovementInputSetup.new_x);
+                        Console.WriteLine(InputSetup.new_x);
                         GeneralVelocity.x = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_a);
+                        Console.WriteLine(InputSetup.new_a);
                         GeneralVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_t);
+                        Console.WriteLine(InputSetup.new_t);
                         GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
 
                         GeneralVelocity.VelocityMaster();
@@ -55,13 +61,13 @@ namespace Calculator
                     {
                         Console.WriteLine("x = v - a * t");
 
-                        Console.WriteLine(MovementInputSetup.new_v);
+                        Console.WriteLine(InputSetup.new_v);
                         GeneralVelocity.v = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_a);
+                        Console.WriteLine(InputSetup.new_a);
                         GeneralVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_t);
+                        Console.WriteLine(InputSetup.new_t);
                         GeneralVelocity.t = Convert.ToDouble(Console.ReadLine());
 
                         GeneralVelocity.InitialVelocity();
@@ -79,13 +85,13 @@ namespace Calculator
                     {
                         Console.WriteLine("v = (x^2 + 2as)^0.5");
 
-                        Console.WriteLine(MovementInputSetup.new_x);
+                        Console.WriteLine(InputSetup.new_x);
                         TimelessVelocity.x = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_a);
+                        Console.WriteLine(InputSetup.new_a);
                         TimelessVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_s);
+                        Console.WriteLine(InputSetup.new_s);
                         TimelessVelocity.s = Convert.ToDouble(Console.ReadLine());
 
                         TimelessVelocity.VelocityMaster();
@@ -95,13 +101,13 @@ namespace Calculator
                     {
                         Console.WriteLine("x = (v^2 - 2as)^0.5");
 
-                        Console.WriteLine(MovementInputSetup.new_v);
+                        Console.WriteLine(InputSetup.new_v);
                         TimelessVelocity.v = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_a);
+                        Console.WriteLine(InputSetup.new_a);
                         TimelessVelocity.a = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine(MovementInputSetup.new_s);
+                        Console.WriteLine(InputSetup.new_s);
                         TimelessVelocity.s = Convert.ToDouble(Console.ReadLine());
 
                         TimelessVelocity.InitialTimelssVelocity();
@@ -114,13 +120,13 @@ namespace Calculator
 
                     Console.WriteLine("u = s/t - at/2");
 
-                    Console.WriteLine(MovementInputSetup.new_s);
+                    Console.WriteLine(InputSetup.new_s);
                     InitialVelocityByDistance.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_t);
+                    Console.WriteLine(InputSetup.new_t);
                     InitialVelocityByDistance.t = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_a);
+                    Console.WriteLine(InputSetup.new_a);
                     InitialVelocityByDistance.a = Convert.ToDouble(Console.ReadLine());
 
                     InitialVelocityByDistance.VelocityMaster();
@@ -138,13 +144,13 @@ namespace Calculator
                 {
                     Console.WriteLine("a = (v - x) / t");
 
-                    Console.WriteLine(MovementInputSetup.new_v);
+                    Console.WriteLine(InputSetup.new_v);
                     Acceleration.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_x);
+                    Console.WriteLine(InputSetup.new_x);
                     Acceleration.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_t);
+                    Console.WriteLine(InputSetup.new_t);
                     Acceleration.t = Convert.ToDouble(Console.ReadLine());
 
                     Acceleration.GeneralAcceleration();
@@ -154,13 +160,13 @@ namespace Calculator
                 {
                     Console.WriteLine("a = (v^2 - x^2) / 2s");
 
-                    Console.WriteLine(MovementInputSetup.new_v);
+                    Console.WriteLine(InputSetup.new_v);
                     Acceleration.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_x);
+                    Console.WriteLine(InputSetup.new_x);
                     Acceleration.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_s);
+                    Console.WriteLine(InputSetup.new_s);
                     Acceleration.s = Convert.ToDouble(Console.ReadLine());
 
                     Acceleration.TimelessAcceleration();
@@ -170,13 +176,13 @@ namespace Calculator
                 {
                     Console.WriteLine("a = 2(s - ut) / t^2");
 
-                    Console.WriteLine(MovementInputSetup.new_s);
+                    Console.WriteLine(InputSetup.new_s);
                     Acceleration.s = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_u);
+                    Console.WriteLine(InputSetup.new_u);
                     Acceleration.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_t);
+                    Console.WriteLine(InputSetup.new_t);
                     Acceleration.t = Convert.ToDouble(Console.ReadLine());
 
                     Acceleration.AccelerationByDistance();
@@ -193,10 +199,10 @@ namespace Calculator
                 {
                     Console.WriteLine("s = v * t");
 
-                    Console.WriteLine(MovementInputSetup.new_v);
+                    Console.WriteLine(InputSetup.new_v);
                     Distance.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_t);
+                    Console.WriteLine(InputSetup.new_t);
                     Distance.t = Convert.ToDouble(Console.ReadLine());
 
                     Distance.DistanceByAverageVelocity();
@@ -206,29 +212,30 @@ namespace Calculator
                 {
                     Console.WriteLine("s = (v^2 + x^2) / 2a");
 
-                    Console.WriteLine(MovementInputSetup.new_v);
+                    Console.WriteLine(InputSetup.new_v);
                     Distance.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_x);
+                    Console.WriteLine(InputSetup.new_x);
                     Distance.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_a);
+                    Console.WriteLine(InputSetup.new_a);
+                    Console.WriteLine("if a = g then enter 9.82");
                     Distance.a = Convert.ToDouble(Console.ReadLine());
 
                     Distance.TimelessDistance();
                 }
 
-                else
+                else if (DistanceCalculation == "distance")
                 {
                     Console.WriteLine("s = ut + (at^2) / 2");
 
-                    Console.WriteLine(MovementInputSetup.new_u);
+                    Console.WriteLine(InputSetup.new_u);
                     Distance.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_t);
+                    Console.WriteLine(InputSetup.new_t);
                     Distance.t = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_a);
+                    Console.WriteLine(InputSetup.new_a);
                     Distance.a = Convert.ToDouble(Console.ReadLine());
 
                     Distance.DistanceDistance();
@@ -245,10 +252,10 @@ namespace Calculator
                 {
                     Console.WriteLine("t = s / v");
 
-                    Console.WriteLine(MovementInputSetup.new_s);
+                    Console.WriteLine(InputSetup.new_s);
                     Time.s = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_v);
+                    Console.WriteLine(InputSetup.new_v);
                     Time.v = Convert.ToDouble(Console.ReadLine());
 
                     Time.TimeByAverageVelocity();
@@ -258,13 +265,14 @@ namespace Calculator
                 {
                     Console.WriteLine("t = (v - x) / a");
 
-                    Console.WriteLine(MovementInputSetup.new_v);
+                    Console.WriteLine(InputSetup.new_v);
                     Time.v = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_x);
+                    Console.WriteLine(InputSetup.new_x);
                     Time.x = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_a);
+                    Console.WriteLine(InputSetup.new_a);
+                    Console.WriteLine("if a = g then enter 9.82");
                     Time.a = Convert.ToDouble(Console.ReadLine());
 
                     Time.TimeByAcceleration();
@@ -274,13 +282,13 @@ namespace Calculator
                 {
                     Console.WriteLine("t = (-u + (u^2 + 2as)^0.5) /a");
 
-                    Console.WriteLine(MovementInputSetup.new_u);
+                    Console.WriteLine(InputSetup.new_u);
                     Time.u = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_a);
+                    Console.WriteLine(InputSetup.new_a);
                     Time.a = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine(MovementInputSetup.new_s);
+                    Console.WriteLine(InputSetup.new_s);
                     Time.s = Convert.ToDouble(Console.ReadLine());
 
                     Time.TimeByDistance();

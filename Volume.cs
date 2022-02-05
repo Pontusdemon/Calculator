@@ -26,13 +26,13 @@ namespace Calculator
         public class Arkimedes : Volume
         {
             public double FL;
-            public double d;
+            public double ρ;
             public double V;
             public double g = 9.82;
 
             public override void MasterVolume()
             {
-                V = FL / (d * g);
+                V = FL / (ρ * g);
                 Console.WriteLine("V = " + V);
             }
         }
